@@ -1,7 +1,7 @@
 <main>
     <?php
-//        $rsql_event = $bdd->queryGet('SELECT * FROM event');
-        foreach ($bdd->queryGet('SELECT * from event') as $row) {
+
+        foreach ($listEvent as $row) {
         ?>
 
     <div onclick="changeVisu(this, 'container event-list-click', 'container event-list');" class="container event-list">

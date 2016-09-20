@@ -61,6 +61,14 @@ class BDD{
         }
     }
 
+    public static function getConnect() {
+      return ($this->PDOInstance);
+    }
+
+    public function test() {
+      echo "TEST OK";
+    }
+
     public function queryGet($query){
         $returnReq = $this->query($query);
         return $returnReq;
