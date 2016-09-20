@@ -8,8 +8,8 @@
                 </div>
             </div>
             <div class="clearfix"></div>
-            <div class="container space-correc">
-                <div class="homepagetxtbloack pull-left col-md-8">
+            <div class="container spaceCorrecBox">
+                <div class="spaceCorrec homepagetxtbloack pull-left col-md-8">
                     <div id="myCarousel" class="carou-resize carousel slide" data-ride="carousel">
                         <!-- Wrapper for slides -->
                         <div class="carousel-inner container" role="listbox">
