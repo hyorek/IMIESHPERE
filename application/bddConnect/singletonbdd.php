@@ -36,28 +36,19 @@ class SPDO
 <?php
 class BDD{
     public static $instance = null;
-    const SQL_USER = 'root';
-    const SQL_PASS = '';
-    const SQL_HOST = 'localhost';
-    const SQL_NBDD = 'projet_delta';
+    const DEFAULT_SQL_USER = 'root';
+    const DEFAULT_SQL_HOST = 'localhost';
+    const DEFAULT_SQL_PASS = '';
+    const DEFAULT_SQL_DTB = 'projet_delta';
     
     private $connexionBDD;
 
     private function __construct(){
         try {
-            $this->connexionBDD = new PDO("mysql:host=".self::SQL_HOST.";dbname=".self::SQL_NBDD.",".self::SQL_USER.",".self::SQL_PASS);
+              $this->PDOInstance = new PDO('mysql:dbname='.self::DEFAULT_SQL_DTB.';host='.self::DEFAULT_SQL_HOST,self::DEFAULT_SQL_USER ,self::DEFAULT_SQL_PASS);    
         } catch (Exception $ex) { 
             print ("ERROR !: " . $ex->getMessage() . "<br/>");
         }
-    }
-
-    public function queryGet($query){
-        $returnReq = $this->connectionBDD->query($query);
-        return $returnReq;
-    }
-
-    public function execution($exec){
-        $this->connectionBDD->query($query);
     }
 
     public static function getInstance() {
@@ -69,7 +60,19 @@ class BDD{
             return self::$instance;
         }
     }
+
+    public function queryGet($query){
+        $returnReq = $this->query($query);
+        return $returnReq;
+    }
+
+    public function execution($exec){
+        $this->connectionBDD->query($query);
+    }
+
 }
+
+$bdd = BDD::getInstance();
 ?>
 
 

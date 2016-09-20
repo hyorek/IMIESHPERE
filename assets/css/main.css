@@ -4,10 +4,16 @@
    Author's custom styles
    ========================================================================== */
 
+html{
+    height: 100%;
+}
+
 
 body{
     background-color: #f3f2f0;
     margin: 0 auto;
+    min-height: 100%;
+    position: relative;
 }
 
 .toppage{
@@ -39,7 +45,7 @@ body{
     font-size: 40px;
     padding: 10px;
     padding-top: 33%;
-    margin-top: 5px;
+    margin-top: 15px;
     transition: 0.5s;
 }
 
@@ -60,6 +66,8 @@ body{
     padding-right: 0;
     vertical-align: middle;
     text-align: justify;
+    margin-top: 15px;
+
 }
 
 .eventaff{
@@ -88,11 +96,13 @@ body{
 .spaceCorrectBox{
     margin-left: 0;
     padding: 0;
+    margin-bottom: 60px;
+
 }
 
 .spaceCorrec{
     margin-top: 15px;
-    margin-bottom: 15px;
+    margin-bottom: 60px;
     padding-left: 0;
 }
 
@@ -209,8 +219,6 @@ body{
 
 
 /* footer CSS */
-
-
 
 footer{
     height: 50px;

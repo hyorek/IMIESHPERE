@@ -1,4 +1,5 @@
 <footer>
+    <div class=".clearfix"></div>
     <div class="foot">
         <div class="container">
             <div class="list-group thend col-md-4">
