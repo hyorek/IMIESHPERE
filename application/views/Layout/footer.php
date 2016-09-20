@@ -5,7 +5,6 @@
                 <h3>BDE IMIESPHERE</h3>
                 <ul>
                     <li class="list-group-item list-perso"><a href="#">Qui sommes-nous ?</a></li>
-                    <li class="list-group-item list-perso"><a href="#">F.A.Q évènements</a></li>   
                     <li class="list-group-item list-perso"><a href="#">L'équipe du BDE</a></li>
                 </ul>
             </div>
