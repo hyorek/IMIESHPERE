@@ -94,7 +94,6 @@ else if ($_GET['action'] == 'aboutUs') {
 
 }
 else if ($_GET['action'] == 'listEvent') {
-    echo "ListEvent";
     require_once('application/controleurs/listEventControler.php');
     
     $listEventController = new listEventController();

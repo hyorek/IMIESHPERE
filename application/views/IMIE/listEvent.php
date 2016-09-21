@@ -1,6 +1,9 @@
 <main>
     <?php
 
+
+    if (1/*nombre elem in list >= 1 */) {
+
         foreach ($listEvent as $row) {
         ?>
 
@@ -29,5 +32,9 @@
                 <a class="plus col-md-4" href="index.php"><i class="fa fa-plus" aria-hidden="true"></i></a>
             </div>
         </div>
-        <?php } ?>
+        <?php }} else {
+            ?>
+                <div class="container"><h4 class="align-center">Pas d'evenement en cours</h4></div>
+            <?php
+            } ?>
 </main>
