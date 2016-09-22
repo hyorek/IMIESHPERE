@@ -2,6 +2,7 @@
 
 require_once('application/views/Layout/header.php');
 
+
 if (empty($_GET['action'])){
     $_GET['action'] = 'homepage';
 }

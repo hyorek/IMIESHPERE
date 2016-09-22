@@ -100,7 +100,7 @@ function getmon($mon) {
             <div class=" container">
                 <a class="plus" href="event_creat.php"><i class="fa fa-plus" aria-hidden="true"></i> Ajouter un evenement</a>
             </div>
-
+            
 
 
             <?php /* Pour repeter autant d'event qu'il y a d'event 
