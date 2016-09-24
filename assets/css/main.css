@@ -207,28 +207,34 @@ body{
     width: 100%;
 }
 
-footer{
+.footer{
     height: 50px;
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
 }
-footer h3{
+.footer h3{
     text-align: center;
     margin-left: 12px;
     padding: 0;
 }
-footer li{
+.footer li{
     text-align: center;
     margin-right: 30px;
 }
 
-footer li a{
+.footer li a{
     color: white;
 }
-footer li a:hover{
+.footer li a:hover{
     text-decoration: none;
+}
+
+.espace{
+    height: 15px;
+    padding: 5px;
+    
 }
 
 
