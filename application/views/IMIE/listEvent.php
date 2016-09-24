@@ -10,8 +10,7 @@
 					foreach ( $_POST ['listEvent'] as $row ) {
 						?>
 
-    <div
-	onclick="changeVisu(this, 'container event-list-click', 'container event-list');"
+    <div id=<?php echo $row[0] ?>
 	class="container event-list">
 	<div class="col-md-11">
 		<h4>
@@ -41,8 +40,7 @@
 	</div>
 </div>
         <?php
-					
-}
+					}
 				} else {
 					?>
                 <div class="container">
@@ -52,4 +50,18 @@
 				}
 				?>
 				
-				</main>
+</main>
+<<script type="text/javascript">
+
+addEventListener("click", function() {
+	console.log(this.);
+	var selectEvent = document.getElementsByClassName("container event-list-click");
+	var unselectEvent = document.getElementsByClassName("container event-list");
+	unselectEvent[0].className = "container event-list-click";
+})
+
+
+</script>
+
+
+
