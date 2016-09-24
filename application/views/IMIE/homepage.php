@@ -1,9 +1,11 @@
 
 <main class="container">
 <div class="container space-correc">
-	<a href="index.php?action=aboutUs" class="boxhp pull-left col-md-4"><div>
+	<a href="index.php?action=aboutUs" class="boxhp pull-left col-md-4">
+		<div>
 			<p>DECOUVREZ NOUS</p>
-		</div></a>
+		</div>
+	</a>
 	<div class="pull-right col-md-8">
 		<div class="homepagetxtblock ">Lorem ipsum dolor sit amet, consectetur
 			adipiscing elit. Nunc enim magna, hendrerit quis ipsum et, consequat
@@ -33,46 +35,31 @@
 				</div>
 				<div class="item">
 					<img class="img-responsive img-resize"
-						src="assets/img/IMIEIntegration2.jpg" alt="img1">
-					<div class="carousel-caption"></div>
-				</div>
-
-				<div class="item">
-					<img class="img-responsive img-resize"
-						src="assets/img/IMIEIntegration3.jpg" alt="img1">
+						src="assets/img/IMIEIntegration2.jpg" alt="img2">
 					<div class="carousel-caption"></div>
 				</div>
 				<div class="item">
 					<img class="img-responsive img-resize"
-						src="assets/img/IMIEIntegration4.jpg" alt="img1">
+						src="assets/img/IMIEIntegration3.jpg" alt="img3">
 					<div class="carousel-caption"></div>
 				</div>
-				<div class="item">
+				<div class="item align-center">
 					<img class="img-responsive img-resize"
-						src="assets/img/IMIEIntegration5.jpg" alt="img1">
+						src="assets/img/IMIEIntegration4.jpg" alt="img4">
 					<div class="carousel-caption"></div>
 				</div>
-				<div class="item">
+				<div class="item align-center">
 					<img class="img-responsive img-resize"
-						src="assets/img/IMIEIntegration6.jpg" alt="img1">
+						src="assets/img/IMIEIntegration5.jpg" alt="img5">
 					<div class="carousel-caption"></div>
 				</div>
-				<div class="item">
+				<div class="item align-center">
 					<img class="img-responsive img-resize"
-						src="assets/img/IMIEIntegration7.jpg" alt="img1">
-					<div class="carousel-caption"></div>
-				</div>
-				<div class="item">
-					<img class="img-responsive img-resize"
-						src="assets/img/IMIEIntegration8.jpg" alt="img1">
-					<div class="carousel-caption"></div>
-				</div>
-				<div class="item">
-					<img class="img-responsive img-resize"
-						src="assets/img/IMIEIntegration9.jpg" alt="img1">
+						src="assets/img/IMIEIntegration6.jpg" alt="img6">
 					<div class="carousel-caption"></div>
 				</div>
 			</div>
+
 			<a class="left carousel-control" href="#myCarousel" role="button"
 				data-slide="prev"> <span class="glyphicon glyphicon-chevron-left"
 				aria-hidden="true"></span> <span class="sr-only">Previous</span>
@@ -82,6 +69,7 @@
 				<span class="sr-only">Next</span>
 			</a>
 		</div>
+
 	</div>
 	<a href="index.php?action=listEvent" class="boxhp pull-right col-md-4"><div>
 			<p>PROCHAIN EVENEMENT</p>

@@ -51,7 +51,7 @@
 				?>
 				
 </main>
-<<script type="text/javascript">
+<script type="text/javascript">
 
 addEventListener("click", function() {
 	console.log(this.);

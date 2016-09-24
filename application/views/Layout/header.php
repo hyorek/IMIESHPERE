@@ -21,7 +21,6 @@ require_once ('assets/phpFunction/phpFunction.php');
 <link rel="stylesheet" href="assets/css/bootstrap-theme.min.css">
 <link rel="stylesheet" href="assets/css/main.css">
 <link rel="stylesheet" href="assets/css/font-awesome.min.css">
-<script src="assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
 </head>
 <body>
 	<header class="toppage">
