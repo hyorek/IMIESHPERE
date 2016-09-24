@@ -58,6 +58,25 @@
 						src="assets/img/IMIEIntegration6.jpg" alt="img6">
 					<div class="carousel-caption"></div>
 				</div>
+				<div class="item align-center">
+					<img class="img-responsive img-resize"
+						src="assets/img/IMIEIntegration7.jpg" alt="img7">
+					<div class="carousel-caption"></div>
+				</div>
+				<div class="item align-center">
+					<img class="img-responsive img-resize"
+						src="assets/img/IMIEIntegration8.jpg" alt="img8">
+					<div class="carousel-caption"></div>
+				</div>
+				<div class="item align-center">
+					<img class="img-responsive img-resize"
+						src="assets/img/IMIEIntegration9.jpg" alt="img9">
+					<div class="carousel-caption"></div>
+				</div>
+
+
+
+
 			</div>
 
 			<a class="left carousel-control" href="#myCarousel" role="button"
