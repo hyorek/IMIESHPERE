@@ -24,6 +24,40 @@ if ($_GET['action'] == 'inscription') {
     $connectionController->connection();
     */
 }
+else if ($_GET['action'] == 'listUser') {
+    require_once('target controleurs');
+    
+    $listUserController = new listUserController();
+    $listUserController->listUser();
+
+}
+else if ($_GET['action'] == 'addUser') {
+    echo "addUser";
+    /*
+    require_once('target controleurs');
+    
+    $addUserController = new addUserController();
+    $addUserController->addUser();
+    */
+
+}
+else if ($_GET['action'] == 'editUser') {
+    echo "editUser";
+    /*
+    require_once('target controleurs');
+    
+    $editUserController = new editUserController();
+    $editUserController->editUser();
+    */
+
+}
+else if ($_GET['action'] == 'listEvent') {
+	/* si utilisateur pas connecter l'envoyer sur la page de connection */
+    require_once('application/controleurs/listEventControler.php');
+    $listEventController = new listEventController();
+    $listEventController->listEvent();
+
+}
 else if ($_GET['action'] == 'addEvent') {
     echo "addEvent";
     /*
@@ -44,26 +78,6 @@ else if ($_GET['action'] == 'editEvent') {
     */
 
 }
-else if ($_GET['action'] == 'addUser') {
-    echo "addUser";
-    /*
-    require_once('target controleurs');
-    
-    $addUserController = new addUserController();
-    $addUserController->addUser();
-    */
-
-}
-else if ($_GET['action'] == 'listUser') {
-    echo "ListUser";
-    /*
-    require_once('target controleurs');
-    
-    $listUserController = new listUserController();
-    $listUserController->listUser();
-    */
-
-}
 else if ($_GET['action'] == 'profil') {
     echo "yourProfil";
     /*
@@ -74,48 +88,9 @@ else if ($_GET['action'] == 'profil') {
     */
 
 }
-else if ($_GET['action'] == 'editUser') {
-    echo "editUser";
-    /*
-    require_once('target controleurs');
-    
-    $editUserController = new editUserController();
-    $editUserController->editUser();
-    */
-
-}
-else if ($_GET['action'] == 'listEvent') {
-    require_once('application/controleurs/listEventControler.php');
-    
-    $listEventController = new listEventController();
-    $listEventController->listEvent();
-
-}
 else {
     require_once('application/controleurs/homepageControler.php');
     $homepageController = new homepageController();
     $homepageController->homepage();   
 }
 require_once('application/views/Layout/footer.php');
-
-
-/*
-if (!empty($_GET['action']) == "lire") {
-    // ICI pour lire un article
-    require_once("application\controleurs/BlogController.php");
-    $blogController = new BlogController();
-    $blogController->lire();
-
-} else if (!empty($_GET['action']) == "ajouter_formulaire") {
-    // ICI pour lire un article
-    echo "ajouter_formulaire";
-} else if (!empty($_GET['action']) == "ajouter_article") {
-    // ICI pour lire un article
-    echo "ajouter_article";
-} else {
-    echo "ACCUEIL";
-}
-*/
-
-?>
-

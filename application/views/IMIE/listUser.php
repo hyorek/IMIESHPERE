@@ -4,9 +4,9 @@
 		aria-hidden="true"></i> Ajouter un evenement</a>
 </div>
     <?php
-				if ($_POST ['listEvent']) {
+				if ($_POST ['listUser']) {
 					
-					foreach ( $_POST ['listEvent'] as $row ) {
+					foreach ( $_POST ['listUser'] as $row ) {
 						?>
 
     <div id=<?php echo $row['id_event']?>
@@ -45,7 +45,7 @@
 				} else {
 					?>
                 <div class="container">
-	<h4 class="align-center">Pas d'evenement en cours</h4>
+	<h4 class="align-center">Pas d'utilisateur inscrit</h4>
 </div>
             <?php
 				}
