@@ -50,8 +50,6 @@ require_once ('assets/phpFunction/phpFunction.php');
 								class="glyphicon glyphicon-user"></span> Gestion utilisateur</a></li>
 						<li><a href="index.php?action=listEvent"><span
 								class="glyphicon glyphicon-align-justify"></span> Evenement</a></li>
-						<li><a href="index.php?action=aboutUs"><span
-								class="glyphicon glyphicon-tower"></span> Nous</a></li>
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
 

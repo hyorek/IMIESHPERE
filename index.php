@@ -84,16 +84,6 @@ else if ($_GET['action'] == 'editUser') {
     */
 
 }
-else if ($_GET['action'] == 'aboutUs') {
-    echo "aboutUs";
-    /*
-    require_once('target controleurs');
-    
-    $aboutUsController = new aboutUsControler();
-    $aboutUsController->aboutUs();
-    */
-
-}
 else if ($_GET['action'] == 'listEvent') {
     require_once('application/controleurs/listEventControler.php');
     
