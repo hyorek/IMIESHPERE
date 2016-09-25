@@ -10,7 +10,7 @@
         <div class="homepagetxtblock ">
                      
                         <h3>Bienvenue sur le site de l'Imiesphère</h3>
-                        <p>L'Imisphàre est l'association du bureau des étudiants (BDE) de l'IMIE de Rennes.</p>
+                        <p>L'Imisphère est l'association du bureau des étudiants (BDE) de l'IMIE de Rennes.</p>
                         <p>Vous trouverez ici toutes les informations relatives à la vie de l'association et les évènements qui ont eu et auront lieu dans le cadre de notre centre de formation.</p>
                         <p>N'hésitez pas à consulter nos évènements et à vous inscrire sur le site afin de prendre part à nos prochaines activités ! </p>
                         <p>Bonne visite et à bientôt !</p>

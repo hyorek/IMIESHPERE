@@ -2,14 +2,13 @@
 
 require_once('application/views/Layout/header.php');
 
-
 if (empty($_GET['action'])){
     $_GET['action'] = 'homepage';
 }
 
 if ($_GET['action'] == 'inscription') {
 
-    require_once('application/controleurs/listUserControler.php');
+    require_once('application/controleurs/inscriptionControler.php');
 
     $inscriptionController = new inscriptionController();
     $inscriptionController->inscription();

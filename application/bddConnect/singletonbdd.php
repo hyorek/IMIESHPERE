@@ -25,16 +25,16 @@ class BDD {
 	public static function getConnect() {
 		return ($this->PDOInstance);
 	}
-	public function test() {
-		echo "TEST OK";
-	}
+
+	
 	public function queryGet($req) {
-		$resuReq = $this->PDOInstance->query ( $req );
+		$resuReq = $this->PDOInstance->query ($req);
 		return $resuReq;
 	}
-	public function execution($req) {
-		$resuReq = $this->PDOInstance->query ( $req );
-		return $resuReq;
+	public function execution($req, $prep) {
+			
+		$reqt = $this->PDOInstance->prepare($req);
+		$reqt->execute($prep);
 	}
 }
 $bdd = BDD::getInstance ();
