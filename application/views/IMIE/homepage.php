@@ -6,18 +6,16 @@
 			<p>DECOUVREZ NOUS</p>
 		</div>
 	</a>
-	<div class="pull-right col-md-8">
-		<div class="homepagetxtblock ">Lorem ipsum dolor sit amet, consectetur
-			adipiscing elit. Nunc enim magna, hendrerit quis ipsum et, consequat
-			posuere quam. Nunc aliquam ex id velit ultricies rutrum. Vivamus
-			rutrum risus a molestie euismod. Nullam tincidunt, tellus eu
-			consectetur convallis, nibh orci fringilla lacus, et egestas ante dui
-			ac sem. Maecenas facilisis, leo nec feugiat finibus, orci velit
-			semper libero, et accumsan risus magna sit amet dolor. Donec dapibus
-			elit nulla, eu ultrices diam eleifend non. Vivamus id volutpat magna.
-			Fusce feugiat ultricies orci aliquet congue. Pellentesque eget
-			dapibus mi. Aenean aliquet in mi et egestas. Aliquam ut risus tempus,
-			tempus quam nec, dapibus tortor.</div>
+	<div class="pull-right col-md-8 vertali">
+        <div class="homepagetxtblock ">
+                     
+                        <h3>Bienvenue sur le site de l'Imiesphère</h3>
+                        <p>L'Imisphàre est l'association du bureau des étudiants (BDE) de l'IMIE de Rennes.</p>
+                        <p>Vous trouverez ici toutes les informations relatives à la vie de l'association et les évènements qui ont eu et auront lieu dans le cadre de notre centre de formation.</p>
+                        <p>N'hésitez pas à consulter nos évènements et à vous inscrire sur le site afin de prendre part à nos prochaines activités ! </p>
+                        <p>Bonne visite et à bientôt !</p>
+                        
+                    </div>
 	</div>
 </div>
 <div class="clearfix"></div>

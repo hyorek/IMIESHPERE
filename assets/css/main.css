@@ -95,7 +95,6 @@ body{
 .spaceCorrectBox{
     margin-left: 0;
     padding: 0;
-    margin-bottom: 60px;
 
 }
 
@@ -263,3 +262,8 @@ a {
     padding: 42px;
     
 }
+
+.vertali{
+	padding-top: 100px;
+}
+

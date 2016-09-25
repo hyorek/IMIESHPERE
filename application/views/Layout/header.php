@@ -5,8 +5,8 @@ require_once ('assets/phpFunction/phpFunction.php');
 <!DOCTYPE HTML>
 <html>
 <head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
 <title>IMIE Sphère</title>
 <meta name="description" content="">
 
