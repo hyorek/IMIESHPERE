@@ -8,21 +8,19 @@ if (empty($_GET['action'])){
 }
 
 if ($_GET['action'] == 'inscription') {
-    echo "inscription";
-    /*
-    require_once('target controleurs');
+
+    require_once('application/controleurs/listUserControler.php');
 
     $inscriptionController = new inscriptionController();
     $inscriptionController->inscription();
-    */
+
 } else if ($_GET['action'] == 'connection') {
-    echo "connection";
-    /*
-    require_once('target controleurs');
+
+    require_once('application/controleurs/listUserControler.php');
 
     $connectionController = new connectionController();
     $connectionController->connection();
-    */
+
 }
 else if ($_GET['action'] == 'listUser') {
     require_once('application/controleurs/listUserControler.php');
@@ -79,13 +77,12 @@ else if ($_GET['action'] == 'editEvent') {
 
 }
 else if ($_GET['action'] == 'profil') {
-    echo "yourProfil";
-    /*
-    require_once('target controleurs');
+
+    require_once('application/controleurs/profilControler.php');
     
     $profilController = new profilController();
     $profilController->profil();
-    */
+
 
 }
 else {

@@ -252,8 +252,14 @@ footer li a:hover{
     width: 100%;
 }
 
+a {
+	color : inherit;
+	text-decoration: none;
+}
 
 
-
-
-
+.espace{
+    height: 15px;
+    padding: 42px;
+    
+}

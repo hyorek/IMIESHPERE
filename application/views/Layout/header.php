@@ -53,14 +53,21 @@ require_once ('assets/phpFunction/phpFunction.php');
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
 
+
+
                     <?php #si user connecter afficher deconnecion a la plase de connexion et inscription   ?>
-                    <li><a href="index.php?action=inscription"><span
-								class="glyphicon glyphicon-floppy-disk"></span> Inscription</a></li>
-						<li><a href="index.php?action=connection"><span
-								class="glyphicon glyphicon-log-in"></span> Connexion</a></li>
-						<li><a href="index.php?action=deco"><span
-								class="glyphicon glyphicon-log-out"></span> Deconnexion</a></li>
+
+					<?php  if (!isset($_POST['connection'])){ ?>                   
+                    	<li><a href="index.php?action=inscription"><span class="glyphicon glyphicon-floppy-disk"></span> Inscription</a></li>
+						<li><a href="index.php?action=connection"><span class="glyphicon glyphicon-log-in"></span> Connexion</a></li>
+						<?php } else {?>
+						<li><a href="index.php?action=deco"><span class="glyphicon glyphicon-log-out"></span> Deconnexion</a></li>
+				<?php }?>
+
 					</ul>
+
+
+
 				</div>
 			</div>
 		</nav>
