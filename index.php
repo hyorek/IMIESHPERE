@@ -29,23 +29,19 @@ else if ($_GET['action'] == 'listUser') {
 
 }
 else if ($_GET['action'] == 'addUser') {
-    echo "addUser";
-    /*
-    require_once('target controleurs');
+    require_once('application/controleurs/addUserControler.php');
     
     $addUserController = new addUserController();
     $addUserController->addUser();
-    */
+
 
 }
 else if ($_GET['action'] == 'editUser') {
-    echo "editUser";
-    /*
-    require_once('target controleurs');
+
+    require_once('application/controleurs/editUserControler.php');
     
     $editUserController = new editUserController();
     $editUserController->editUser();
-    */
 
 }
 else if ($_GET['action'] == 'listEvent') {
@@ -56,23 +52,17 @@ else if ($_GET['action'] == 'listEvent') {
 
 }
 else if ($_GET['action'] == 'addEvent') {
-    echo "addEvent";
-    /*
-    require_once('target controleurs');
+    require_once('application/controleurs/addEventControler.php');
     
     $addEventController = new addEventController();
     $addEventController->addEvent();
-    */
 
 }
 else if ($_GET['action'] == 'editEvent') {
-    echo "editEvent";
-    /*
-    require_once('target controleurs');
+    require_once('application/controleurs/editEventControler.php');
     
     $editEventController = new editEventController();
     $editEventController->editEvent();
-    */
 
 }
 else if ($_GET['action'] == 'profil') {
