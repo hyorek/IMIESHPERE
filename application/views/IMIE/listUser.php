@@ -1,43 +1,31 @@
 <main>
 <div class=" container">
-	<a class="plus" href="index.php?action=addEvent"><i class="fa fa-plus"
-		aria-hidden="true"></i> Ajouter un evenement</a>
+	<a class="plus" href="index.php?action=addUser"><i class="fa fa-plus"
+		aria-hidden="true"></i> Ajouter un utilisateur</a>
 </div>
     <?php
 				if ($_POST ['listUser']) {
-					
 					foreach ( $_POST ['listUser'] as $row ) {
 						?>
 
-    <div id=<?php echo $row['id_event']?>
-	onClick="changeVisu(this, 'container event-list', 'container event-list-click')"
+    <div id=<?php echo $row['id_user']?>
 	class="container event-list">
 	<div class="col-md-11">
-		<h4>
-			<b><?php echo($row[1]); ?></b>
-		</h4>
-		<span> <b>Date de l'evenement : </b><?php echo(whodate($row[3])); ?><br />
-                <?php
-						if ($row [4] != null) {
-							print ("<b>Date de fin de l'evenement : </b>" . whodate ( $row [4] )) ;
-						}
-						?>
-                <br /> <b>Address: </b><?php echo $row['street_number']." ".$row['street']; ?>
-                <br /> <b>Lieux: </b><?php echo $row[11]; ?>
-                </span>
-		<p>
-			<b>Description : </b><?php echo($row[2]); ?><br /> <b><?php echo 'Tarif : 50€'; ?></b>
-		</p>
+
+	<div class="col-md-9" ><h3><?php echo $row['firstname']." ".$row['lastname'] ?></h3></div>
+	<div class="col-md-3" ><h5><?php echo $row['name']." ".$row['promotion'] ?></h5></div>
+	
+	<div class="col-md-4"><h5><?php echo "Email : ".$row['email'] ?></h5></div>
+	<div class="col-md-4"><h5><?php echo "Portable : ".$row['phone'] ?></h5></div>
+	<div class="col-md-4"><h5><?php echo "Role : ".$row[1] ?></h5></div>
+	
 	</div>
 	<div class="col-md-1">
                 <?php #afficher les 2 en desous si admin seulement   ?>
                 <a class="gear col-md-4" href="index.php"><i
 			class="fa fa-cog" aria-hidden="true"></i></a>
-                <?php #afficher '+' si user inscrit a l'event sinon afficher '-'   ?>
                 <a class="minus col-md-4" href="index.php"><i
-			class="fa fa-minus" aria-hidden="true"></i></a> <a
-			class="plus col-md-4" href="index.php"><i class="fa fa-plus"
-			aria-hidden="true"></i></a>
+			class="fa fa-close" aria-hidden="true"></i></a>
 	</div>
 </div>
         <?php
@@ -52,22 +40,3 @@
 				?>
 				
 </main>
-<script type="text/javascript">
-function changeVisu(elem, c2, c1)
-{
-    var i = 0;
-    var verifclass = 0;
-
-    if (elem.className === c1)
-        verifclass = 1;
-
-    var tmp = document.getElementsByClassName(c1);
-    while (i < tmp.length)
-        tmp[i++].className = c2;
-
-    if (verifclass === 1)
-        elem.className = c2;
-    else
-        elem.className = c1;
-}
-</script>

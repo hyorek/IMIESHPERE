@@ -25,7 +25,7 @@ if ($_GET['action'] == 'inscription') {
     */
 }
 else if ($_GET['action'] == 'listUser') {
-    require_once('target controleurs');
+    require_once('application/controleurs/listUserControler.php');
     
     $listUserController = new listUserController();
     $listUserController->listUser();

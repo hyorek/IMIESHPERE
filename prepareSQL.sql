@@ -131,5 +131,9 @@ address 1 a 10
 
 INSERT INTO event_address (id_event,id_address) VALUES (1,1),(2,2),(3,3),(4,4),(5,5),(6,6);
 
+SELECT * FROM role INNER JOIN user_role ON role.id_role = user_role.id_role
+INNER JOIN user ON user_role.id_user = user.id_user
+INNER JOIN grade ON  user.id_grade = grade.id_grade
+
 
 8635155
