@@ -79,7 +79,6 @@ else if ($_GET['action'] == 'editEvent') {
 else if ($_GET['action'] == 'profil') {
 
     require_once('application/controleurs/profilControler.php');
-    
     $profilController = new profilController();
     $profilController->profil();
 

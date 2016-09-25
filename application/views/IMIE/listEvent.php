@@ -27,7 +27,7 @@
                 <br /> <b>Lieux: </b><?php echo $row[11]; ?>
                 </span>
 		<p>
-			<b>Description : </b><?php echo($row[2]); ?><br /> <b><?php echo 'Tarif : 50€'; ?></b>
+			<b>Description : </b><?php echo($row[2]); ?><br /> <b><?php echo 'Tarif : 50 â‚¬'; ?></b>
 		</p>
 	</div>
 	<div class="col-md-1">

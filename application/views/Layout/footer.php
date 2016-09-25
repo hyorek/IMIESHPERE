@@ -5,27 +5,19 @@
             <div class="list-group thend col-md-4">
                 <h3>BDE IMIESPHERE</h3>
                 <ul>
-                    <li class="list-group-item list-perso"><a href="#">Qui sommes-nous ?</a></li>
-                    <li class="list-group-item list-perso"><a href="#">F.A.Q évènements</a></li>   
-                    <li class="list-group-item list-perso"><a href="#">L'équipe du BDE</a></li>
+                    <li class="list-group-item list-perso"><a href="https://www.facebook.com/groups/607032966097379/?fref=ts">Notre facebook</a></li>
                 </ul>
             </div>
             <div class="list-group thend col-md-4">
                 <h3>CONTACT</h3>
                 <ul>
                     <li class="list-group-item list-perso"><a href="#">Nous contacter</a></li>
-                    <li class="list-group-item list-perso"><a></a></li>
-                    <li class="list-group-item list-perso"><a></a></li>
-                    <li class="list-group-item list-perso"><a></a></li>
                 </ul>
             </div>
             <div class="list-group thend col-md-4" >
                 <h3>L'IMIE</h3>
                 <ul>
                     <li class="list-group-item list-perso"><a href="http://imie-ecole-informatique.fr/" target="blank">le site de l'IMIE</a></li>
-                    <li class="list-group-item list-perso"><a href="http://imie-ecole-informatique.fr/campus/rennes.html" target="blank">Contact de l'IMIE RENNES</a></li>
-                    <li class="list-group-item list-perso"><a></a></li>
-                    <li class="list-group-item list-perso"><a></a></li>
                 </ul>
             </div>
         </div>
