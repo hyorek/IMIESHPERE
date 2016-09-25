@@ -10,6 +10,7 @@
 
     <div id=<?php echo $row['id_user']?>
 	class="container event-list">
+	<a href="index.php?action=profil&uid=<?php echo $row['id_user']; ?>">
 	<div class="col-md-11">
 
 	<div class="col-md-9" ><h3><?php echo $row['firstname']." ".$row['lastname'] ?></h3></div>
@@ -27,6 +28,7 @@
                 <a class="minus col-md-4" href="index.php"><i
 			class="fa fa-close" aria-hidden="true"></i></a>
 	</div>
+	</a>
 </div>
         <?php
 					}
