@@ -32,7 +32,7 @@
 </form>
 </table>
 
-
+<!Voici le fichier PHP qui va avec :
 
 <?php 
 $nom=$HTTP_POST_VARS['nom']; 

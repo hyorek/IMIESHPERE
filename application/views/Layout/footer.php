@@ -13,7 +13,7 @@
             <div class="list-group thend col-md-4">
                 <h3>CONTACT</h3>
                 <ul>
-                    <li class="list-group-item list-perso"><a href="#">Nous contacter</a></li>
+                    <li class="list-group-item list-perso"><a href="IMIEsphere/contact.php">Nous contacter</a></li>
                     <li class="list-group-item list-perso"><a></a></li>
                     <li class="list-group-item list-perso"><a></a></li>
                     <li class="list-group-item list-perso"><a></a></li>
