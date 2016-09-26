@@ -2,6 +2,8 @@
 
 require_once('application/views/Layout/header.php');
 
+print_r($_SESSION);
+
 if (empty($_GET['action'])){
     $_GET['action'] = 'homepage';
 }
@@ -14,6 +16,14 @@ if ($_GET['action'] == 'inscription') {
     $inscriptionController->inscription();
 
 } else if ($_GET['action'] == 'connection') {
+
+    require_once('application/controleurs/connectionControler.php');
+
+    $connectionController = new connectionController();
+    $connectionController->connection();
+
+}
+else if ($_GET['action'] == 'deconnection') {
 
     require_once('application/controleurs/connectionControler.php');
 

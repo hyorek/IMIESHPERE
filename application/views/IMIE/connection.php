@@ -2,7 +2,7 @@
 <div class="container affclean">
 
 
-	<form method="post" action="ConnectionModel.php">
+	<form method="post" action="#">
 		<fieldset>
 			<legend>CONNECTION</legend>
 			<label for="email"> Email :</label>

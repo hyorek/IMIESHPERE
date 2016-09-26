@@ -57,11 +57,11 @@ require_once ('assets/phpFunction/phpFunction.php');
 
                     <?php #si user connecter afficher deconnecion a la plase de connexion et inscription   ?>
 
-					<?php  if (!isset($_POST['connection'])){ ?>                   
+					<?php  if (!isset($_SESSION['ouvert'])){ ?>                   
                     	<li><a href="index.php?action=inscription"><span class="glyphicon glyphicon-floppy-disk"></span> Inscription</a></li>
 						<li><a href="index.php?action=connection"><span class="glyphicon glyphicon-log-in"></span> Connexion</a></li>
 						<?php } else {?>
-						<li><a href="index.php?action=deco"><span class="glyphicon glyphicon-log-out"></span> Deconnexion</a></li>
+						<li><a href="index.php?action=deconnection"><span class="glyphicon glyphicon-log-out"></span> Deconnexion</a></li>
 				<?php }?>
 
 					</ul>
