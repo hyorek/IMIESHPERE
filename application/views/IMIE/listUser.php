@@ -22,8 +22,7 @@
 	
 	</div>
 	<div class="col-md-1">
-                <?php #afficher les 2 en desous si admin seulement   ?>
-                <a class="gear col-md-4" href="index.php"><i
+                <a class="gear col-md-4" href="index.php?action=editUser"><i
 			class="fa fa-cog" aria-hidden="true"></i></a>
                 <a class="minus col-md-4" href="index.php"><i
 			class="fa fa-close" aria-hidden="true"></i></a>

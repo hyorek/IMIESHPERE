@@ -28,7 +28,7 @@
 
 </fieldset>
 <br/>
-<input type="submit" value="Envoyer" />
+<input type="submit" value="Inscription" />
 
 			</p>
 		</form>

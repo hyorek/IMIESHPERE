@@ -15,7 +15,7 @@ if ($_GET['action'] == 'inscription') {
 
 } else if ($_GET['action'] == 'connection') {
 
-    require_once('application/controleurs/listUserControler.php');
+    require_once('application/controleurs/connectionControler.php');
 
     $connectionController = new connectionController();
     $connectionController->connection();

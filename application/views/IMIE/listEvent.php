@@ -31,9 +31,10 @@
 		</p>
 	</div>
 	<div class="col-md-1">
-                <?php #afficher les 2 en desous si admin seulement   ?>
-                <a class="gear col-md-4" href="index.php"><i
+                <?php #afficher en desous si admin seulement   ?>
+                <a class="gear col-md-4" href="index.php?action=editEvent"><i
 			class="fa fa-cog" aria-hidden="true"></i></a>
+			
                 <?php #afficher '+' si user inscrit a l'event sinon afficher '-'   ?>
                 <a class="minus col-md-4" href="index.php"><i
 			class="fa fa-minus" aria-hidden="true"></i></a> <a
