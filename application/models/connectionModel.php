@@ -12,15 +12,17 @@ class connectionModel {
 		$req = "SELECT * FROM `user_role` INNER JOIN user ON user.id_user = user_role.id_user WHERE `email` = '$email' AND `password` = '$pwd' ";
 
 		$verif = $bdd->queryGet($req);
-		
+		$verif = $bdd->fetchData($verif);
 		if (!empty($verif)) {
-			session_start();
 			if (!isset($_SESSION['count'])) {
 				$_SESSION['count'] = 0;
 			} else {
 				$_SESSION['count']++;
 			}
 			$_SESSION['ouvert'] = true;
+			$_SESSION['id_user'] = $verif['id_user'];
+			$_SESSION['id_role'] = $verif['id_role'];
+				
 			header('Location: index.php');
 		} else {
 			echo "FAIL CONNECTION";

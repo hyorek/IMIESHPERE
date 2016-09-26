@@ -2,15 +2,13 @@
 
 class deconnectionController{
 
-	public function connection(){
+	public function deconnection(){
 
-		require_once("/application/models/connectionModel.php");
-		
+		require_once("/application/models/deconnectionModel.php");
 		$deconnection = new deconnectionModel();
-		$deconnection = setDeconnection();
+		$deconnection->setDeconnection();
 		header('Location: index.php');
 		}
 	}
-}
 
 ?>

@@ -1,8 +1,7 @@
 <?php
 
+session_start();
 require_once('application/views/Layout/header.php');
-
-print_r($_SESSION);
 
 if (empty($_GET['action'])){
     $_GET['action'] = 'homepage';
@@ -25,10 +24,10 @@ if ($_GET['action'] == 'inscription') {
 }
 else if ($_GET['action'] == 'deconnection') {
 
-    require_once('application/controleurs/connectionControler.php');
+    require_once('application/controleurs/deconnectionControler.php');
 
-    $connectionController = new connectionController();
-    $connectionController->connection();
+    $deconnectionController = new deconnectionController();
+    $deconnectionController->deconnection();
 
 }
 else if ($_GET['action'] == 'listUser') {

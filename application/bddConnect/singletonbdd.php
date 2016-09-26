@@ -28,13 +28,17 @@ class BDD {
 
 	
 	public function queryGet($req) {
-		$resuReq = $this->PDOInstance->query ($req);
+		$resuReq = $this->PDOInstance->query($req);
 		return $resuReq;
 	}
 	public function execution($req, $prep) {
-			
 		$reqt = $this->PDOInstance->prepare($req);
 		$reqt->execute($prep);
+	}
+	
+	public function fetchData($fetchRow) {
+		$result = $fetchRow->fetch();
+		return ($result);
 	}
 }
 $bdd = BDD::getInstance ();

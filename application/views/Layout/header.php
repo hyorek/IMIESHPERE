@@ -44,12 +44,17 @@ require_once ('assets/phpFunction/phpFunction.php');
 					<ul class="nav navbar-nav ">
 						<li><a href="index.php"><span class="glyphicon glyphicon-home"></span>
 								Accueil</a></li>
+								<?php if (isset($_SESSION['id_role'])) { ?>
 						<li><a href="index.php?action=profil"><span
 								class="glyphicon glyphicon-user"></span> Profil</a></li>
+								
+								<?php if (($_SESSION['id_role']) == 1) {?>
 						<li><a href="index.php?action=listUser"><span
 								class="glyphicon glyphicon-user"></span> Gestion utilisateur</a></li>
+								<?php } ?>
 						<li><a href="index.php?action=listEvent"><span
 								class="glyphicon glyphicon-align-justify"></span> Evenement</a></li>
+								<?php } ?>
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
 
