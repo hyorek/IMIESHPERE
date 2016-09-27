@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 20, 2016 at 02:57 PM
+-- Generation Time: Sep 27, 2016 at 09:36 PM
 -- Server version: 5.7.11
 -- PHP Version: 5.6.19
 
@@ -89,6 +89,16 @@ CREATE TABLE `cost` (
   `id_role` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `cost`
+--
+
+INSERT INTO `cost` (`id_registration`, `id_payment`, `id_role`) VALUES
+(1, 1, 2),
+(1, 1, 3),
+(2, 4, 2),
+(2, 5, 3);
+
 -- --------------------------------------------------------
 
 --
@@ -125,6 +135,18 @@ CREATE TABLE `event_address` (
   `id_event` int(11) NOT NULL,
   `id_address` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `event_address`
+--
+
+INSERT INTO `event_address` (`id_event`, `id_address`) VALUES
+(1, 1),
+(2, 2),
+(3, 3),
+(4, 4),
+(5, 5),
+(6, 6);
 
 -- --------------------------------------------------------
 
@@ -202,6 +224,14 @@ CREATE TABLE `registration` (
   `id_event` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `registration`
+--
+
+INSERT INTO `registration` (`id_registration`, `place`, `date_start`, `date_end`, `pre_registration`, `id_event`) VALUES
+(1, 15, '2016-09-22 00:00:00', '2016-09-30 00:00:00', NULL, 3),
+(2, 20, '2016-09-30 00:00:00', NULL, NULL, 6);
+
 -- --------------------------------------------------------
 
 --
@@ -277,11 +307,11 @@ INSERT INTO `user` (`id_user`, `membership_number`, `firstname`, `lastname`, `em
 (6, NULL, 'jerome', 'alincourt', 'jerome.alincourt@gmail.com', '0659569508', 'blouge', 1),
 (7, NULL, 'jerome', 'pavic', 'jeromepavic@gmail.com', '0634908636', 'bonjoir', 1),
 (8, NULL, 'boris', 'drouin', 'boris.drouin@gmail.com', '0663445401', 'salut', 1),
-(9, NULL, 'antoine', 'liegard', 'cochondu975@elise.com', '0299360990', 'Ar042Px_xXx_BG', 1),
+(9, NULL, 'antoine', 'liegard', 'lepetitconqui@doreleskebab.com', '0299360990', 'halal', 1),
 (10, NULL, 'fabian', 'inial', 'fabien.inial@gmail.com', '0684660729', 'heisenberg', 1),
 (11, NULL, 'kevin', 'henkes', 'kevhenkes@gmail.com', '0762762256', 'password', 1),
 (12, NULL, 'antoine', 'cronier', 'antoinecronier@github.com', '0606060606', 'pwDfmlmp65dG', NULL),
-(13, '13051935', 'Theodore', 'Mitchell', 'neque@Naminterdum.com', '0690325228', 'GAF87UPV2YW', 9),
+(13, '13051935', 'Theodore', 'Mitchell', 'ok@google.com', '0690325228', 'azerty', 9),
 (14, '29166558', 'Minerva', 'Mayo', 'Duis.gravida.Praesent@convallisconvallisdolor.co.uk', '0368542747', 'RNB15MKS5HC', 4),
 (15, '14907640', 'Leila', 'Chan', 'turpis.nec.mauris@ultrices.com', '0616326706', 'XUJ93FAB6FA', 6),
 (16, '49895147', 'Kessie', 'Stokes', 'Donec.vitae.erat@anteNuncmauris.org', '0743314127', 'JPO29EIM5GN', 10),
@@ -380,7 +410,10 @@ INSERT INTO `user` (`id_user`, `membership_number`, `firstname`, `lastname`, `em
 (109, '22211887', 'Carl', 'Morris', 'nisi@enimmitempor.edu', '0744567209', 'YHY84MCL0WK', 3),
 (110, '76478439', 'Beau', 'Weber', 'eu@Phaselluselit.ca', '0200682914', 'RAT52BVP8GB', 6),
 (111, '23227533', 'Janna', 'Weaver', 'est.arcu@libero.edu', '0720739967', 'BWE59RJQ3UM', 10),
-(112, '89354086', 'Sybil', 'Zamora', 'lorem@arcuiaculis.net', '0361616812', 'UWG76IKD5CT', 9);
+(112, '89354086', 'Sybil', 'Zamora', 'lorem@arcuiaculis.net', '0361616812', 'UWG76IKD5CT', 9),
+(113, NULL, 'aaa', 'bbb', 'aaaa.bbbb@cccc.com', '456789123', 'bonjoir', 1),
+(114, NULL, 'azerty', 'qwerty', 'bonjoir@troplol.fr', '1234567890', 'oklol', 4),
+(115, NULL, 'maurice', 'antoine', 'bondour@hotmail.fr', '1234567890', 'bonjoir', 10);
 
 -- --------------------------------------------------------
 
@@ -394,6 +427,14 @@ CREATE TABLE `user_registration` (
   `unsubscribe` tinyint(1) DEFAULT NULL,
   `date_registration` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `user_registration`
+--
+
+INSERT INTO `user_registration` (`id_user`, `id_registration`, `unsubscribe`, `date_registration`) VALUES
+(1, 1, NULL, '2016-09-26 00:00:00'),
+(2, 2, 1, '2016-09-20 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -411,7 +452,7 @@ CREATE TABLE `user_role` (
 --
 
 INSERT INTO `user_role` (`id_role`, `id_user`) VALUES
-(2, 1),
+(1, 1),
 (2, 2),
 (2, 3),
 (2, 4),
@@ -522,7 +563,9 @@ INSERT INTO `user_role` (`id_role`, `id_user`) VALUES
 (3, 109),
 (3, 110),
 (2, 111),
-(2, 112);
+(2, 112),
+(3, 114),
+(3, 115);
 
 --
 -- Indexes for dumped tables
@@ -654,7 +697,7 @@ ALTER TABLE `payment`
 -- AUTO_INCREMENT for table `registration`
 --
 ALTER TABLE `registration`
-  MODIFY `id_registration` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_registration` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `role`
 --
@@ -669,7 +712,7 @@ ALTER TABLE `type_event`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=113;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=116;
 --
 -- Constraints for dumped tables
 --
