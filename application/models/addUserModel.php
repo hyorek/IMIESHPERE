@@ -4,11 +4,15 @@ require_once 'application/bddConnect/singletonbdd.php';
 class addUserModel {
 	
 	
-	public function getaddUser() {
+	public function getAddUser() {
 		$bdd = BDD::getInstance ();
 		
 		$req = "SELECT * FROM grade";
-		$_POST['insFormPromo'] = $bdd->queryGet($req);
+		$_POST['grade'] = $bdd->queryGet($req);
+
+		$req = "SELECT * FROM role ORDER BY id_role desc";
+		$_POST['role'] = $bdd->queryGet($req);
+		
 	}
 	
 	public function setaddUser() {

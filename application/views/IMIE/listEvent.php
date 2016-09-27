@@ -25,7 +25,7 @@
 							print ("<b>Date de fin de l'evenement : </b>" . whodate ( $row [4] )) ;
 						}
 						?>
-                <br /> <b>Address: </b><?php echo $row['street_number']." ".$row['street']; ?>
+                <br /> <b>Address: </b><?php echo $row['street_number']." ".$row['street']." ".$row['postal_code']." ".$row['city_name'] ; ?>
                 <br /> <b>Lieux: </b><?php echo $row[11]; ?>
                 </span>
 		<p>

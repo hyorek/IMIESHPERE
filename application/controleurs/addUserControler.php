@@ -6,7 +6,7 @@ class addUserController{
 
 		require_once("/application/models/addUserModel.php");
 		$addUser = new addUserModel();
-		$reqaddUser = $addUser->getaddUser();
+		$reqaddUser = $addUser->getAddUser();
 
 		require_once("/application/views/IMIE/addUser.php");
 	}
