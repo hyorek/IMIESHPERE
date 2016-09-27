@@ -20,8 +20,8 @@ class connectionModel {
 				$_SESSION['count']++;
 			}
 			$_SESSION['ouvert'] = true;
-			$_SESSION['id_user'] = $verif['id_user'];
-			$_SESSION['id_role'] = $verif['id_role'];
+			$_SESSION['id_user'] = $verif[0]['id_user'];
+			$_SESSION['id_role'] = $verif[0]['id_role'];
 				
 			header('Location: index.php');
 		} else {

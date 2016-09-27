@@ -17,7 +17,7 @@
 				<label for="grade">Promotion</label><br /> <select name="inscriptionId_grade" id="inscriptionId_grade">
        	<?php foreach($_POST['insFormPromo'] as $row) { ?>
 
-           <option value="<?php echo $row[1]." ".$row[2] ?>"><?php echo $row[1]." ".$row[2] ?></option>
+           <option value="<?php echo $row[0]?>"><?php echo $row[1]." ".$row[2] ?></option>
 		<?php }?>
        </select>
 
