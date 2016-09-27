@@ -30,7 +30,6 @@
 <br/>
 <input type="submit" value="Envoyer" />
 
-			</p>
 		</form>
 </div>
 </main>

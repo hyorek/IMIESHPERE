@@ -1,8 +1,10 @@
 
 <main>
 <div class=" container">
+	<?php if ($_SESSION['id_role'] == 1) { ?>
 	<a class="plus" href="index.php?action=addEvent"><i class="fa fa-plus"
-		aria-hidden="true"></i> Ajouter un evenement</a>
+		aria-hidden="true"></i> Ajouter un évènement</a>
+		<?php } ?>
 </div>
     <?php
 				if ($_POST ['listEvent']) {
@@ -31,13 +33,11 @@
 		</p>
 	</div>
 	<div class="col-md-1">
-                <?php #afficher en desous si admin seulement   ?>
-                <a class="gear col-md-4" href="index.php?action=editEvent"><i
+			<?php if ($_SESSION['id_role'] == 1) { ?>
+	                <a class="gear col-md-4" href="index.php?action=editEvent"><i
 			class="fa fa-cog" aria-hidden="true"></i></a>
-			
-                <?php #afficher '+' si user inscrit a l'event sinon afficher '-'   ?>
-                <a class="minus col-md-4" href="index.php"><i
-			class="fa fa-minus" aria-hidden="true"></i></a> <a
+			<?php } ?>
+ <a
 			class="plus col-md-4" href="index.php"><i class="fa fa-plus"
 			aria-hidden="true"></i></a>
 	</div>

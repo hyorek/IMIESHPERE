@@ -1,22 +1,15 @@
 <main>
 <div class=" container">
-	<a class="plus" href="index.php?action=addUser"><i class="fa fa-plus"
-		aria-hidden="true"></i> Ajouter un utilisateur</a>
 </div>
     <?php
     
     	if (isset($_GET['uid'])) {
-    		echo $_GET['uid'];
     	}
-    
-    
-				if ($_POST ['listUser']) {
-					foreach ( $_POST ['listUser'] as $row ) {
+				if ($_POST['profil']) {
+					foreach ( $_POST ['profil'] as $row ) {
 						?>
-
     <div id=<?php echo $row['id_user']?>
-	class="container event-list">
-	<a href="index.php?action=profil&uid=<?php echo $row['id_user']; ?>">
+	class="container affclean">
 	<div class="col-md-11">
 
 	<div class="col-md-9" ><h3><?php echo $row['firstname']." ".$row['lastname'] ?></h3></div>
@@ -34,14 +27,13 @@
                 <a class="minus col-md-4" href="index.php"><i
 			class="fa fa-close" aria-hidden="true"></i></a>
 	</div>
-	</a>
 </div>
         <?php
 					}
 				} else {
 					?>
                 <div class="container">
-	<h4 class="align-center">Pas d'utilisateur inscrit</h4>
+	<h4 class="align-center">Aucun utilisateur n'existe avec cette id</h4>
 </div>
             <?php
 				}

@@ -1,7 +1,7 @@
 
 <main class="container">
 <div class="container space-correc">
-	<a href="index.php?action=aboutUs" class="boxhp pull-left col-md-4">
+	<a target="blanck" href="https://www.facebook.com/groups/607032966097379/?fref=ts" class="boxhp pull-left col-md-4">
 		<div>
 			<p>DECOUVREZ NOUS</p>
 		</div>

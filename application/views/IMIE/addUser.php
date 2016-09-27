@@ -3,8 +3,6 @@
 
 
 		<form method="post" action="inscriptionModel.php">
-
-
 			<fieldset>
 				<legend>AJOUTER UN UTILISATEUR</legend>
 				
@@ -30,7 +28,6 @@
 <br/>
 <input type="submit" value="Envoyer" />
 
-			</p>
 		</form>
 </div>
 </main>

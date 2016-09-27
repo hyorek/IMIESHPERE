@@ -1,11 +1,14 @@
 <main>
 <div class=" container">
+	<?php if ($_SESSION['id_role'] == 1){ ?>
 	<a class="plus" href="index.php?action=addUser"><i class="fa fa-plus"
 		aria-hidden="true"></i> Ajouter un utilisateur</a>
+		<?php } ?>
+		
 </div>
     <?php
 				if ($_POST ['listUser']) {
-					foreach ( $_POST ['listUser'] as $row ) {
+					foreach ( $_POST['listUser'] as $row ) {
 						?>
 
     <div id=<?php echo $row['id_user']?>

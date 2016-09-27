@@ -30,7 +30,6 @@
 <br/>
 <input type="submit" value="Inscription" />
 
-			</p>
 		</form>
 </div>
 </main>

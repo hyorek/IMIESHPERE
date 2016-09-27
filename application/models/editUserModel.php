@@ -11,6 +11,6 @@ class addUserModel {
 		WHERE user.id_user = $idUser";
 		$infoUser = $bdd->queryGet($req);
 	}
-	
 
-?>b
+}
+?>

@@ -7,20 +7,17 @@ class listEventModel {
 				INNER JOIN event_address ON event.id_event = event_address.id_event
 				INNER JOIN address ON event_address.id_address = address.id_address
 				";
-		/*
-		$req = "SELECT * FROM registration
+		/*				
+				SELECT * FROM role
+INNER JOIN cost ON cost.id_role = role.id_role
+INNER JOIN payment ON payment.id_payment = cost.id_payment
+INNER JOIN cost as costR ON payment.id_payment = costR.id_payment
+INNER JOIN registration ON registration.id_registration = costR.id_registration
+INNER JOIN event ON registration.id_event = event.id_event
+INNER JOIN event_address ON event_address.id_event = event.id_event
+INNER JOIN address ON event_address.id_address = address.id_address
+INNER JOIN city ON address.id_city = city.id_city
 				
-				INENR JOIN cost ON cost.id_registration = registration.id_registration
-				INNER JOIN payment ON cost.id_payment = payment.id_payment
-				INENR JOIN cost ON cost.id_payment = payment.id_payment
-				INNER JOIN role ON cost.id_role = role.id_role
-				INNER JOIN cost ON cost.id_role = role.id_role
-				INNER JOIN registration ON cost.id_registration = registration.id_registration
-				INNER JOIN event ON registration.id_event = event.id_event
-				INNER JOIN event_address ON event.id_event = event_address.id_event
-				INNER JOIN address ON event_address.id_address = address.id_address
-
-				"
 				
 				*/
 		$bdd = BDD::getInstance ();
