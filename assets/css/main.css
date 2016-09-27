@@ -276,7 +276,18 @@ a {
     margin-bottom: 10px;
 
 }
-
+.connectionModel{
+	color:red;
+	text-align:center;
+	font-size:20px;
+	font-style:bold;
+}
+.inscriptionControler{
+	color:red;
+	text-align:center;
+	font-size:20px;
+	font-style:bold;
+}
 
 
 

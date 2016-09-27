@@ -25,7 +25,7 @@ class connectionModel {
 				
 			header('Location: index.php');
 		} else {
-			echo "FAIL CONNECTION";
+			echo "<p class='connectionModel'>Identifiant / mot de passe incorrect</p>";
 		}
 	}
 }

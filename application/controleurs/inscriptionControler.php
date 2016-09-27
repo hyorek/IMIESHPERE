@@ -13,7 +13,7 @@ class inscriptionController {
 			$reqinscription = $inscription->setInscription();
 			
 		} else {
-			echo "Inscription Fail !!!";
+			echo "<p class='inscriptionControler'>Une erreur s'est produite lors de votre inscription.</p>";
 		}
 
 	}
