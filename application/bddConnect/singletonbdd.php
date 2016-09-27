@@ -37,7 +37,7 @@ class BDD {
 	}
 	
 	public function fetchData($fetchRow) {
-		$result = $fetchRow->fetch();
+		$result = $fetchRow->fetchAll();
 		return ($result);
 	}
 }
