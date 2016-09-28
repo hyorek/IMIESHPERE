@@ -16,6 +16,20 @@ class userRegistration{
 		if (isset($id_user)){
 			echo "Vous êtes déjà enregistré pour cet évènement";
 		}	
+		
+		$req = "INSERT INTO user_registration VALUES (:id_user, :id_registration)";
+		$prep = array(
+				"id_registration" => $id_registration,
+				"id_user" => $id_user
+		);
+		$bdd->execution($req, $prep);
+		
+		
+		$bdd = BDD::getInstance ();
+		$tmp = $bdd->queryGet ( $req );
+		$_POST ['setRegistration'] = $tmp;
+		
+		return ($tmp);
 	}
 
 	
