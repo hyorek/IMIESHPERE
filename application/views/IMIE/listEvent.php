@@ -34,11 +34,11 @@
 	</div>
 	<div class="col-md-1">
 			<?php if ($_SESSION['id_role'] == 1) { ?>
-	                <a class="gear col-md-4" href="index.php?action=editEvent"><i
-			class="fa fa-cog" aria-hidden="true"></i></a>
+	                <a class="gear col-md-4"
+			href="index.php?action=editEvent"><i class="fa fa-cog"
+			aria-hidden="true"></i></a>
 			<?php } ?>
- <a
-			class="plus col-md-4" href="index.php"><i class="fa fa-plus"
+ <a class="plus col-md-4" href="index.php"><i class="fa fa-plus"
 			aria-hidden="true"></i></a>
 	</div>
 </div>
