@@ -17,14 +17,15 @@ class addEventModel {
 		 * echo $_POST ['prixAdherent'];
 		 * echo $_POST ['descEvent'];
 		 */
+
 		/*
-		if (! isset ( $_POST ['place'] )) {
+		if (!isset ( $_POST ['place'] )) {
 			$_POST ['place'] = null;
 		}
-		if (! isset ( $_POST ['nbPlace'] )) {
+		if (!isset ( $_POST ['nbPlace'] )) {
 			$_POST ['nbPlace'] = null;
 		}
-		if (! isset ( $_POST ['dateEnd'] )) {
+		if (!isset ( $_POST ['dateEnd'] )) {
 			$_POST ['dateEnd'] = null;
 		}
 		*/
@@ -143,6 +144,7 @@ class addEventModel {
 		//echo "ICI ça Mache";
 		/* --------------------------------------------------------------- */
 		header('Location: index.php?action=listEvent');
+		
 	}
 }
 
