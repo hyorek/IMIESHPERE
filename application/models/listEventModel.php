@@ -1,11 +1,6 @@
 <?php
-<<<<<<< HEAD
-
-class listEventModel{
-    
-
-=======
 require_once 'application/bddConnect/singletonbdd.php';
+
 class listEventModel {
 
 	public function getListEvent($userID) {
@@ -35,7 +30,6 @@ INNER JOIN city ON address.id_city = city.id_city";
 		
 		return ($tmp);
 	}
->>>>>>> Dereck-event
 }
 
 ?>
