@@ -1,131 +1,114 @@
 <?php
+session_start ();
+require_once ('application/views/Layout/header.php');
 
-require_once('application/views/Layout/header.php');
 
-if (empty($_GET['action'])){
-    $_GET['action'] = 'homepage';
+if (empty ( $_GET ['action'] )) {
+	$_GET ['action'] = 'homepage';
 }
 
-if ($_GET['action'] == 'inscription') {
-    echo "inscription";
-    /*
-    require_once('target controleurs');
-
-    $inscriptionController = new inscriptionController();
-    $inscriptionController->inscription();
-    */
-} else if ($_GET['action'] == 'connection') {
-    echo "connection";
-    /*
-    require_once('target controleurs');
-
-    $connectionController = new connectionController();
-    $connectionController->connection();
-    */
-}
-else if ($_GET['action'] == 'addEvent') {
-    echo "addEvent";
-    /*
-    require_once('target controleurs');
-    
-    $addEventController = new addEventController();
-    $addEventController->addEvent();
-    */
-
-}
-else if ($_GET['action'] == 'editEvent') {
-    echo "editEvent";
-    /*
-    require_once('target controleurs');
-    
-    $editEventController = new editEventController();
-    $editEventController->editEvent();
-    */
-
-}
-else if ($_GET['action'] == 'addUser') {
-    echo "addUser";
-    /*
-    require_once('target controleurs');
-    
-    $addUserController = new addUserController();
-    $addUserController->addUser();
-    */
-
-}
-else if ($_GET['action'] == 'listUser') {
-    echo "ListUser";
-    /*
-    require_once('target controleurs');
-    
-    $listUserController = new listUserController();
-    $listUserController->listUser();
-    */
-
-}
-else if ($_GET['action'] == 'profil') {
-    echo "yourProfil";
-    /*
-    require_once('target controleurs');
-    
-    $profilController = new profilController();
-    $profilController->profil();
-    */
-
-}
-else if ($_GET['action'] == 'editUser') {
-    echo "editUser";
-    /*
-    require_once('target controleurs');
-    
-    $editUserController = new editUserController();
-    $editUserController->editUser();
-    */
-
-}
-else if ($_GET['action'] == 'aboutUs') {
-    echo "aboutUs";
-    /*
-    require_once('target controleurs');
-    
-    $aboutUsController = new aboutUsControler();
-    $aboutUsController->aboutUs();
-    */
-
-}
-else if ($_GET['action'] == 'listEvent') {
-    echo "ListEvent";
-    require_once('application/controleurs/listEventControler.php');
-    
-    $listEventController = new listEventController();
-    $listEventController->listEvent();
-
-}
-else {
-    require_once('application/controleurs/homepageControler.php');
-    $homepageController = new homepageController();
-    $homepageController->homepage();   
-}
-require_once('application/views/Layout/footer.php');
-
-
-/*
-if (!empty($_GET['action']) == "lire") {
-    // ICI pour lire un article
-    require_once("application\controleurs/BlogController.php");
-    $blogController = new BlogController();
-    $blogController->lire();
-
-} else if (!empty($_GET['action']) == "ajouter_formulaire") {
-    // ICI pour lire un article
-    echo "ajouter_formulaire";
-} else if (!empty($_GET['action']) == "ajouter_article") {
-    // ICI pour lire un article
-    echo "ajouter_article";
+if ($_GET ['action'] == 'inscription') {
+	
+	require_once ('application/controleurs/inscriptionControler.php');
+	
+	$inscriptionController = new inscriptionController ();
+	$inscriptionController->inscription ();
+} else if ($_GET ['action'] == 'connection') {
+	
+	require_once ('application/controleurs/connectionControler.php');
+	
+	$connectionController = new connectionController ();
+	$connectionController->connection ();
+} else if ($_GET ['action'] == 'deconnection') {
+	if (isset ( $_SESSION ['id_role'] )) {
+		
+		require_once ('application/controleurs/deconnectionControler.php');
+		
+		$deconnectionController = new deconnectionController ();
+		$deconnectionController->deconnection ();
+	} else {
+		header ( 'Location: index.php?action=connection' );
+	}
+} else if ($_GET ['action'] == 'listUser') {
+	if (isset ( $_SESSION ['id_role'] )) {
+		if (($_SESSION ['id_role']) == 1) {
+			
+			require_once ('application/controleurs/listUserControler.php');
+			
+			$listUserController = new listUserController ();
+			$listUserController->listUser ();
+		} else {
+			header ( 'Location: index.php' );
+		}
+	} else {
+		header ( 'Location: index.php?action=connection' );
+	}
+} else if ($_GET ['action'] == 'addUser') {
+	if (isset ( $_SESSION ['id_role'] )) {
+		if (($_SESSION ['id_role']) == 1) {
+			require_once ('application/controleurs/addUserControler.php');
+			
+			$addUserController = new addUserController ();
+			$addUserController->addUser ();
+		} else {
+			header ( 'Location: index.php' );
+		}
+	} else {
+		header ( 'Location: index.php?action=connection' );
+	}
+} else if ($_GET ['action'] == 'editUser') {
+	if (isset ( $_SESSION ['id_role'] )) {
+			require_once ('application/controleurs/editUserControler.php');
+			$editUserController = new editUserController ();
+			$editUserController->editUser ();
+	} else {
+		header ( 'Location: index.php?action=connection' );
+	}
+} else if ($_GET ['action'] == 'listEvent') {
+	if (isset ( $_SESSION ['id_role'] )) {
+		require_once ('application/controleurs/listEventControler.php');
+		$listEventController = new listEventController ();
+		$listEventController->listEvent ();
+	} else {
+		header ( 'Location: index.php?action=connection' );
+	}
+} else if ($_GET ['action'] == 'addEvent') {
+	if (isset ( $_SESSION ['id_role'] )) {
+		if (($_SESSION ['id_role']) == 1) {
+			require_once ('application/controleurs/addEventControler.php');
+			
+			$addEventController = new addEventController ();
+			$addEventController->addEvent ();
+		} else {
+			header ( 'Location: index.php' );
+		}
+	} else {
+		header ( 'Location: index.php?action=connection' );
+	}
+} else if ($_GET ['action'] == 'editEvent') {
+	if (isset ( $_SESSION ['id_role'] )) {
+		if (($_SESSION ['id_role']) == 1) {
+			require_once ('application/controleurs/editEventControler.php');
+			
+			$editEventController = new editEventController ();
+			$editEventController->editEvent ();
+		} else {
+			header ( 'Location: index.php' );
+		}
+	} else {
+		header ( 'Location: index.php?action=connection' );
+	}
+} else if ($_GET ['action'] == 'profil') {
+	if (isset ( $_SESSION ['id_role'] )) {
+		require_once ('application/controleurs/profilControler.php');
+		$profilController = new profilController ();
+		$profilController->profil ();
+	} else {
+		header ( 'Location: index.php?action=connection' );
+	}
 } else {
-    echo "ACCUEIL";
+	require_once ('application/controleurs/homepageControler.php');
+	$homepageController = new homepageController ();
+	$homepageController->homepage ();
 }
-*/
-
-?>
-
+require_once ('application/views/Layout/footer.php');
