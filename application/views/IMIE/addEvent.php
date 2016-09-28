@@ -2,43 +2,51 @@
 <div class="container affclean">
 
 
-		<form method="post" action="addEventModel.php">
+		<form method="post" action="#">
 
 
 			<fieldset>
 				<legend>AJOUTER UN EVENEMENT</legend>
 				
-				<label for="name">*Nom de l'évènement : </label>
-				<input type="text" name="name" id="name" placeholder="nom" />
+				<label for="name">Nom de l'évènement : </label>
+				<input type="text" name="nameEvent" id="nameEvent" placeholder="Titre" />
 				<br/>
-				<label>*Numero de voie : </label>
-				<input type="number" name="address" id="address" placeholder="9" />
+				<label>Numero de voie : </label>
+				<input type="text" name="streeNumber" id="streeNumber" placeholder="42 bis" />
 				<br/>
-				<label>*Adress de l'évènement : </label>
-				<input type="text" name="address" id="address" placeholder="rue de machin truc" />
+				<label>Adress de l'évènement : </label>
+				<input type="text" name="addressEvent" id="addressEvent" placeholder="Rue Maupertuis" />
 				<br/>
-				<label>*Lieux de l'évènement : </label>
-				<input type="text" name="address" id="address" placeholder="Bar du machin truc" />
+				<label>Ville : </label>
+				<input type="text" name="villeEvent" id="villeEvent" placeholder="Rennes" />
 				<br/>
-				<label for="name">*Date de debut l'évènement : </label>
-				<input type="date" />
+				<label>Code postal : </label>
+				<input type="text" name="codePostal" id="codePostal" placeholder="35700" />
 				<br/>
-				<input type="checkbox" id="boxcheck" onclick="griser('boxcheck','datecheck')">
+				<label>Lieux de l'évènement : </label>
+				<input type="text" name="place" id="place" placeholder="IMIE" />
+				<br/>
+				<label>Nombre de place : </label>
+				<input type="number" name="nbPlace" id="address" placeholder="42" />
+				<br/>
+				<label for="name">Date de debut l'évènement : </label>
+				<input type="datetime" name="dateStart" id="dateStart" placeholder="yyyy-mm-dd hh:mm:ss" />
+				<br/>
+				<input type="checkbox" id="boxcheck" onclick="griser('boxcheck','dateEnd')">
 				<label for="name">Date de fin l'évènement : </label>
-				<input type="date" id="datecheck" disabled="disabled" />
+				<input type="datetime" name="dateEnd" id="dateEnd" disabled="disabled" placeholder="yyyy-mm-dd hh:mm:ss" />
 				<br/>
-				<label>*Prix : </label>
-				<input type="number" name="address" id="address" />
+				<label>Prix : </label>
+				<input type="number" name="prixAll" id="prixAll" />
 				<br/>
 				<input type="checkbox" id="prixboxcheck" onclick="griser('prixboxcheck','prixAdherent')">
 				<label>Prix adherent : </label>
-				<input type="number" name="address" id="prixAdherent" disabled="disabled" />
+				<input type="number" name="prixAdherent" id="prixAdherent" disabled="disabled" />
 				<br/>
 				<br/>
 				<label>Description de l'évènement : </label>
 				<br/>
-				<textarea rows="10" cols="80"></textarea>
-				
+				<textarea name="descEvent" id="descEvent" rows="10" cols="80" placeholder="Description" ></textarea>
 </fieldset>
 <br/>
 <input type="submit" value="Envoyer" />
@@ -51,12 +59,10 @@
 		box = document.getElementById(idbox);
 		elem = document.getElementById(idelem)
 
-		
 		if (box.checked == true) {
 			elem.disabled = false;			
 		} else {
 			elem.disabled = true;
 		}
-	
 	}
 </script>

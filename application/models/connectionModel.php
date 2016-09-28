@@ -25,7 +25,7 @@ class connectionModel {
 				
 			header('Location: index.php');
 		} else {
-			echo "Email ou mot de passe invalide";
+			$_POST['ERR'] = 1;
 		}
 	}
 }

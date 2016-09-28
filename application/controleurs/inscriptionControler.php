@@ -13,7 +13,8 @@ class inscriptionController {
 			$reqinscription = $inscription->setInscription();
 			
 		} else {
-			echo "Inscription Fail !!!";
+			$_POST['ERR'] = 1;
+			//			echo "Inscription Fail !!!";
 		}
 
 	}

@@ -21,7 +21,8 @@ class inscriptionModel {
 		$id_user = $bdd->fetchData($id_user);
 		//print_r($id_user);
 		if (!empty($id_user)) {
-			echo "l'address email $email existe deja";
+			$_POST['ERR'] = 1;
+			//echo "l'address email $email existe deja";
 		} else {			
 			$reqUser = "INSERT INTO user (firstname, lastname, email, phone, password, id_grade) VALUES (:firstname, :lastname, :email, :phone, :password, :id_grade)";
 			$prepUser = array (
