@@ -2,7 +2,7 @@
 <div class="container affclean">
 
 
-		<form method="post" action="#">
+		<form method="post" action="index.php">
 
 
 			<fieldset>
@@ -37,11 +37,11 @@
 				<input type="datetime" name="dateEnd" id="dateEnd" disabled="disabled" placeholder="yyyy-mm-dd hh:mm:ss" />
 				<br/>
 				<label>Prix : </label>
-				<input type="number" name="prixAll" id="prixAll" />
+				<input type="number" name="prixAll" id="prixAll" step="0.01" />
 				<br/>
 				<input type="checkbox" id="prixboxcheck" onclick="griser('prixboxcheck','prixAdherent')">
 				<label>Prix adherent : </label>
-				<input type="number" name="prixAdherent" id="prixAdherent" disabled="disabled" />
+				<input type="number" name="prixAdherent" id="prixAdherent" disabled="disabled" step="0.01" />
 				<br/>
 				<br/>
 				<label>Description de l'évènement : </label>

@@ -27,7 +27,7 @@
 	<div class="col-md-1">
                 <a class="gear col-md-4" href="application/views/Layout/notImplementNow.php"><i
 			class="fa fa-cog" aria-hidden="true"></i></a>
-                <a class="minus col-md-4" href="application/views/Layout/notImplementNow.php"><i
+                <a class="minus col-md-4" href=" "><i
 			class="fa fa-close" aria-hidden="true"></i></a>
 	</div>
 	</a>

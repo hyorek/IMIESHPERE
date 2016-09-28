@@ -3,20 +3,21 @@ require_once 'application/bddConnect/singletonbdd.php';
 class addEventModel {
 	public function getAddEvent() {
 		$bdd = BDD::getInstance ();
+		
 		/*
-		 * echo $_POST ['nameEvent'];
-		 * echo $_POST ['streeNumber'];
-		 * echo $_POST ['addressEvent'];
-		 * echo $_POST ['villeEvent'];
-		 * echo $_POST ['codePostal'];
-		 * echo $_POST ['place'];
-		 * echo $_POST ['nbPlace'];
-		 * echo $_POST ['dateStart'];
-		 * echo $_POST ['dateEnd'];
-		 * echo $_POST ['prixAll'];
-		 * echo $_POST ['prixAdherent'];
-		 * echo $_POST ['descEvent'];
-		 */
+		 $_POST ['nameEvent'] = mysql_real_escape_string($_POST ['nameEvent']);
+		 $_POST ['streeNumber'] = mysql_real_escape_string($_POST ['streeNumber']);
+		 $_POST ['addressEvent'] = mysql_real_escape_string($_POST ['addressEvent']);
+		 $_POST ['villeEvent'] = mysql_real_escape_string($_POST ['villeEvent']);
+		 $_POST ['codePostal'] = mysql_real_escape_string($_POST ['codePostal']);
+		 $_POST ['place'] = mysql_real_escape_string($_POST ['place']);
+		 $_POST ['nbPlace'] = mysql_real_escape_string($_POST ['nbPlace']);
+		 $_POST ['dateStart'] = mysql_real_escape_string($_POST ['dateStart']);
+		 $_POST ['dateEnd'] = mysql_real_escape_string($_POST ['dateEnd']);
+		 $_POST ['prixAll'] =  mysql_real_escape_string($_POST ['prixAll']);
+		 $_POST ['prixAdherent'] = mysql_real_escape_string($_POST ['prixAdherent']);
+		 $_POST ['descEvent'] = mysql_real_escape_string($_POST ['descEvent']);
+		*/
 
 		/*
 		if (!isset ( $_POST ['place'] )) {
@@ -121,6 +122,7 @@ class addEventModel {
 		/* --------------------------------------------------------------- */
 		//echo "ICI ça Mache";
 		/* --------------------------------------------------------------- */
+		/*
 		$reqPaymentAd = "INSERT INTO payment(price) VALUES (:price)";
 		$prepReqPaymentAd = array (
 				'price' => $_POST ['prixAdherent'] 
@@ -130,9 +132,11 @@ class addEventModel {
 		$paymentAdFetch = $bdd->queryGet ( $idReqPaymentAd );
 		$tmp = $bdd->fetchData ( $paymentAdFetch );
 		$id_paymentAd = $tmp [0] ['id_payment'];
+		*/
 		/* --------------------------------------------------------------- */
 		//echo "ICI ça Mache";
 		/* --------------------------------------------------------------- */
+		/*
 		$reqCostAd = "INSERT INTO cost(id_registration, id_payment, id_role) VALUES (:id_registration, :id_payment, :id_role)";
 		$prepReqCostAd = array (
 				'id_registration' => $id_registration,
@@ -140,6 +144,7 @@ class addEventModel {
 				'id_role' => 2 
 		);
 		$bdd->execution ( $reqCostAd, $prepReqCostAd );
+		*/
 		/* --------------------------------------------------------------- */
 		//echo "ICI ça Mache";
 		/* --------------------------------------------------------------- */

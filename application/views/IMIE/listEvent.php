@@ -7,7 +7,6 @@
 </div>
     <?php
 				if ($_POST ['listEvent']) {
-					
 					foreach ( $_POST ['listEvent'] as $row ) {
 						?>
 
@@ -16,19 +15,29 @@
 	class="container event-list">
 	<div class="col-md-11">
 		<h4>
-			<b><?php echo($row[1]); ?></b>
+			<b><?php echo($row[21]); ?></b>
 		</h4>
-		<span> <b>Date de l'evenement : </b><?php echo(whodate($row[3])); ?><br />
+		<span> <b>Date de l'evenement : </b><?php echo(whodate($row[2])); ?><br />
                 <?php
-						if ($row [4] != null) {
-							print ("<b>Date de fin de l'evenement : </b>" . whodate ( $row [4] )) ;
+						if ($row [3] != null) {
+							print ("<b>Date de fin de l'evenement : </b>" . whodate ( $row [3] )."<br />") ;
 						}
 						?>
-                <br /> <b>Address: </b><?php echo $row['street_number']." ".$row['street']." ".$row['postal_code']." ".$row['city_name'] ; ?>
-                <br /> <b>Lieux: </b><?php echo $row[11]; ?>
+                 <b>Address: </b><?php echo $row['street_number']." ".$row['street']." ".$row['postal_code']." ".$row['city_name'] ; ?>
+                <br /> <b>Lieux: </b><?php echo $row[31]; ?>
                 </span>
 		<p>
-			<b>Description : </b><?php echo($row[2]); ?><br /> <b><?php echo 'Tarif : 50 €'; ?></b>
+                <b>Nombre de place: </b><?php 
+                if ($row[1] == 0 || $row[1] == null) {
+				echo "Ø";
+                }
+                	else {
+                echo $row[1]; 
+                	}
+                ?>
+<br /> 
+			<b>Description : </b><?php echo($row[22]); ?><br /> <b><?php echo 'Tarif : '.$row['price'].' €'; ?></b>
+
 		</p>
 	</div>
 	<div class="col-md-1">

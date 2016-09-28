@@ -4,7 +4,7 @@
 
 	<form method="post" action="index.php?action=connection">
 		<fieldset>
-			<legend>CONNECTION</legend>
+			<legend>CONNEXION</legend>
 			<label for="email"> Email :</label>
 			<input type="email" name="connectionEmail" id="connectionEmail" placeholder="Email" />
 			<br /> <label for="password"> Mot de passe :</label>
@@ -19,7 +19,7 @@
   			Email ou mot de passe invalide
 		</div>
 		<?php } ?>
-		<br /> <input type="submit" value="Connection" />
+		<br /> <input type="submit" value="Connexion" />
 	</form>
 </div>
 </main>
